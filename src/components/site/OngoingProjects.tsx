@@ -26,7 +26,7 @@ export function OngoingProjects() {
               params={{ id: p.id }}
               className="group flex flex-col bg-background transition-colors hover:bg-card"
             >
-              <div className="relative grid h-52 place-items-center overflow-hidden bg-card/40 p-3 sm:h-56">
+              <div className="relative h-52 overflow-hidden bg-card/40 p-3 sm:h-56">
                 <img
                   src={p.cover}
                   alt={p.name}

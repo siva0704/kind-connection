@@ -52,7 +52,7 @@ export function MarketDesk() {
               params={{ id: p.id }}
               className="group flex flex-col bg-background p-4 transition-colors hover:bg-card"
             >
-              <div className="relative grid h-48 place-items-center overflow-hidden border border-border/50 bg-card/40 p-3 sm:h-52">
+              <div className="relative h-48 overflow-hidden border border-border/50 bg-card/40 p-3 sm:h-52">
                 <img
                   src={p.cover}
                   alt={p.name}
