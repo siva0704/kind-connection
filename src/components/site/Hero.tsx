@@ -28,17 +28,16 @@ export function Hero() {
         <div className="flex max-w-3xl flex-col justify-center py-16">
           <div className="flex items-center gap-4">
             <span className="rule-gold h-px w-14" />
-            <p className="eyebrow">Hyderabad · Since 1999</p>
+            <p className="eyebrow">Arya Developers · Signature Series</p>
           </div>
           <h1 className="mt-7 font-display text-5xl leading-[0.98] tracking-tight sm:text-7xl lg:text-8xl">
-            <span className="text-platinum-foil">Private 3 BHK estates</span>
+            <span className="text-platinum-foil">The Sovereign Art</span>
             <br />
-            <em className="text-gold-foil italic">in platinum &amp; gold</em>
+            <em className="text-gold-foil italic">of Living</em>
           </h1>
           <p className="mt-7 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
-            Arya Developers designs, builds and hands over residences that hold their
-            value and their finish. Completed towers, live construction, bespoke homes on
-            your own site — and a curated resale and rental desk.
+            A curated anthology of private 3 BHK estates, where the precision of
+            platinum meets the timeless warmth of architectural gold.
           </p>
           <div className="mt-10 flex flex-wrap gap-3">
             <Button asChild size="lg" className="rounded-none px-8 text-xs uppercase tracking-[0.25em]">
