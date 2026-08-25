@@ -35,12 +35,14 @@ export function SectionHeading({
   accent,
   lede,
   align = "left",
+  room,
 }: {
   eyebrow: string;
   title: string;
   accent?: string;
   lede?: string;
   align?: "left" | "center";
+  room?: string;
 }) {
   return (
     <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
@@ -50,6 +52,11 @@ export function SectionHeading({
           align === "center" && "justify-center",
         )}
       >
+        {room ? (
+          <span className="border border-border/70 px-2 py-1 text-[9px] uppercase tracking-[0.3em] text-primary">
+            {room}
+          </span>
+        ) : null}
         <span className="rule-gold h-px w-10 shrink-0" />
         <p className="eyebrow">{eyebrow}</p>
       </div>
@@ -63,6 +70,48 @@ export function SectionHeading({
         </p>
       ) : null}
     </div>
+  );
+}
+
+/**
+ * Museum "plate": an uncropped image resting on a mat inside a fixed-height
+ * frame, so rows stay horizontally consistent without ever cropping a photo.
+ */
+export function PlateImage({
+  src,
+  alt,
+  caption,
+  className,
+  heightClass = "h-44 sm:h-56",
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  className?: string;
+  heightClass?: string;
+}) {
+  return (
+    <figure
+      className={cn(
+        "group relative overflow-hidden border border-border/60 bg-card/40 transition-colors hover:border-primary/50",
+        className,
+      )}
+    >
+      <div className={cn("block p-2 sm:p-3", heightClass)}>
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          data-lightbox
+          className="h-full w-full cursor-zoom-in object-contain transition-transform duration-700 group-hover:scale-[1.03]"
+        />
+      </div>
+      {caption ? (
+        <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 bg-background/80 px-3 py-1.5 text-[9px] uppercase tracking-[0.3em] text-muted-foreground opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
+          {caption}
+        </figcaption>
+      ) : null}
+    </figure>
   );
 }
 

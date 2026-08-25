@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { properties, type Property } from "@/data/properties";
-import { SectionHeading, StarRating } from "./primitives";
+import { SectionHeading, StarRating, PlateImage } from "./primitives";
 import { Button } from "@/components/ui/button";
 
 /**
@@ -10,24 +10,15 @@ import { Button } from "@/components/ui/button";
  */
 function PatternGallery({ property }: { property: Property }) {
   return (
-    <div className="columns-2 gap-2 sm:gap-3 [column-fill:balance]">
+    <div className="grid grid-cols-2 gap-2 sm:gap-3">
       {property.gallery.slice(0, 4).map((src, i) => (
-        <figure
+        <PlateImage
           key={src + i}
-          className="group relative mb-2 break-inside-avoid overflow-hidden border border-border/60 sm:mb-3"
-        >
-          <img
-            src={src}
-            alt={`${property.name} — view ${i + 1}`}
-            loading="lazy"
-            data-lightbox
-            className="block h-auto w-full cursor-zoom-in object-contain"
-          />
-          <span className="pointer-events-none absolute inset-0 bg-background/20 opacity-0 transition-opacity group-hover:opacity-100" />
-          <span className="pointer-events-none absolute bottom-2 left-3 text-[9px] uppercase tracking-[0.3em] text-primary opacity-0 transition-opacity group-hover:opacity-100">
-            0{i + 1}
-          </span>
-        </figure>
+          src={src}
+          alt={`${property.name} — view ${i + 1}`}
+          caption={`Plate 0${i + 1}`}
+          heightClass="h-40 sm:h-52"
+        />
       ))}
     </div>
   );
@@ -88,6 +79,7 @@ export function CompletedProjects() {
       <div className="pattern-lattice absolute inset-0 opacity-30" />
       <div className="relative mx-auto max-w-7xl px-5 py-28 lg:px-10 lg:py-36">
         <SectionHeading
+          room="Room I"
           eyebrow="Completed projects"
           title="Delivered, occupied and"
           accent="rated by residents"
@@ -103,7 +95,7 @@ export function CompletedProjects() {
                 className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-14"
               >
                 <div className={flip ? "lg:order-2" : ""}>
-                  <PatternGallery property={p} flip={flip} />
+                  <PatternGallery property={p} />
                 </div>
 
                 <div className={`flex flex-col justify-center ${flip ? "lg:order-1" : ""}`}>

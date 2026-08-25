@@ -41,6 +41,7 @@ export function CustomBuild() {
 
           <div>
             <SectionHeading
+              room="Room III"
               eyebrow="Customised construction"
               title="Your land, your plan,"
               accent="our site team"

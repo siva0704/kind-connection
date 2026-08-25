@@ -4,7 +4,7 @@ import { ArrowLeft, MapPin, Check } from "lucide-react";
 import { getProperty } from "@/data/properties";
 import { SiteNav } from "@/components/site/SiteNav";
 import { ContactFooter } from "@/components/site/ContactFooter";
-import { GoldFrame, StarRating } from "@/components/site/primitives";
+import { GoldFrame, StarRating, PlateImage } from "@/components/site/primitives";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/property/$id")({
@@ -37,13 +37,6 @@ export const Route = createFileRoute("/property/$id")({
   component: PropertyDetail,
 });
 
-const galleryPattern = [
-  "col-span-4 row-span-2 sm:col-span-2",
-  "col-span-2 row-span-1",
-  "col-span-2 row-span-1",
-  "col-span-2 row-span-1",
-  "col-span-2 row-span-1",
-];
 
 function PropertyDetail() {
   const { property: p } = Route.useLoaderData();
@@ -108,21 +101,15 @@ function PropertyDetail() {
         {/* Pattern gallery */}
         <section className="mx-auto max-w-7xl px-5 py-20 lg:px-10">
           <p className="eyebrow">Gallery</p>
-          <div className="mt-6 grid auto-rows-[110px] grid-cols-4 gap-2 sm:auto-rows-[150px] sm:gap-3">
+          <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
             {p.gallery.slice(0, 5).map((src, i) => (
-              <figure
+              <PlateImage
                 key={`${src}-${i}`}
-                className={`group relative overflow-hidden border border-border/60 ${galleryPattern[i]}`}
-              >
-                <img
-                  src={src}
-                  alt={`${p.name} view ${i + 1}`}
-                  loading="lazy"
-                  data-lightbox
-                  className="h-full w-full cursor-zoom-in object-cover opacity-85 transition-transform duration-700 group-hover:scale-105"
-                />
-                <span className="pattern-dots absolute inset-0 opacity-40" />
-              </figure>
+                src={src}
+                alt={`${p.name} view ${i + 1}`}
+                caption={`Plate 0${i + 1}`}
+                heightClass="h-40 sm:h-48"
+              />
             ))}
           </div>
         </section>
