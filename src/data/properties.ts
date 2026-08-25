@@ -4,6 +4,20 @@ import p3 from "@/assets/p3.jpg";
 import p4 from "@/assets/p4.jpg";
 import ongoing1 from "@/assets/ongoing1.jpg";
 import hero from "@/assets/hero-home.jpg";
+import duplexDuskAsset from "@/assets/duplex-dusk.jpg.asset.json";
+import villaFacadeAsset from "@/assets/villa-facade.jpg.asset.json";
+import interiorLivingAsset from "@/assets/interior-living.jpg.asset.json";
+import interiorChandelierAsset from "@/assets/interior-chandelier.jpg.asset.json";
+import siteBrickAsset from "@/assets/site-brick.jpg.asset.json";
+import sitePlasterAsset from "@/assets/site-plaster.jpg.asset.json";
+
+const duplexDusk = duplexDuskAsset.url;
+const villaFacade = villaFacadeAsset.url;
+const interiorLiving = interiorLivingAsset.url;
+const interiorChandelier = interiorChandelierAsset.url;
+const siteBrick = siteBrickAsset.url;
+const sitePlaster = sitePlasterAsset.url;
+
 
 export type PropertyStatus = "completed" | "ongoing";
 export type Listing = "sale" | "rent" | "sold";
