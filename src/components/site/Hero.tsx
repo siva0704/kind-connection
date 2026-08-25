@@ -11,13 +11,13 @@ const stats = [
 export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden pt-24">
-      <img
-        src={hero}
-        alt="Arya Developers luxury residential tower at golden hour"
-        width={1600}
-        height={1104}
-        className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
-      />
+        <img
+          src={hero}
+          alt="A modern luxury 3 BHK independent home with landscaped garden and private parking at golden hour"
+          width={1600}
+          height={1104}
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
+        />
       <div
         className="absolute inset-0"
         style={{ background: "var(--gradient-veil)" }}
@@ -31,9 +31,9 @@ export function Hero() {
             <p className="eyebrow">Hyderabad · Since 1999</p>
           </div>
           <h1 className="mt-7 font-display text-5xl leading-[0.98] tracking-tight sm:text-7xl lg:text-8xl">
-            <span className="text-platinum-foil">Homes cast in</span>
+            <span className="text-platinum-foil">Private 3 BHK estates</span>
             <br />
-            <em className="text-gold-foil italic">platinum &amp; gold</em>
+            <em className="text-gold-foil italic">in platinum &amp; gold</em>
           </h1>
           <p className="mt-7 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
             Arya Developers designs, builds and hands over residences that hold their
