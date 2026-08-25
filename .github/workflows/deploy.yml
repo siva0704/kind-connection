@@ -31,16 +31,18 @@ jobs:
       - name: Install dependencies
         run: bun install --frozen-lockfile
 
-      - name: Build (static preset)
-        env:
-          GH_PAGES: "true"
-        run: bun run build
+      - name: Build SPA for GitHub Pages
+        run: bunx vite build --config vite.spa.config.ts
 
-      # TanStack Start / Nitro static output lands in .output/public
+      # Copy index.html → 404.html so GH Pages serves the SPA shell for all routes.
+      # The 404.html in public/ handles the redirect back to the SPA router.
+      - name: Copy index.html as 404.html fallback
+        run: cp dist/index.html dist/404.html
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .output/public
+          path: dist
 
   deploy:
     needs: build

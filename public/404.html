@@ -4,14 +4,20 @@
     <meta charset="utf-8" />
     <title>Arya Developers</title>
     <script>
-      // GH Pages SPA redirect: store the path then redirect to the root index
-      // so the JS router can pick up the intended route.
-      var l = window.location;
-      var base = '/kind-connection';
-      var path = l.pathname.slice(base.length) || '/';
-      var search = l.search ? '?' + l.search.slice(1).replace('?', '&') : '';
-      sessionStorage.setItem('ghpages_redirect', path + search + l.hash);
-      l.replace(base + '/?p=1');
+      // GH Pages SPA fallback: when a user hits a deep URL directly (e.g. /kind-connection/property/xyz),
+      // GH Pages returns this 404.html. We store the intended path and redirect to the SPA root
+      // so the JS router can navigate to the correct page.
+      (function () {
+        var base = '/kind-connection';
+        var l = window.location;
+        // Strip the base prefix to get the app-relative path
+        var path = l.pathname.replace(base, '') || '/';
+        var search = l.search || '';
+        var hash = l.hash || '';
+        sessionStorage.setItem('ghpages_redirect', path + search + hash);
+        // Replace with the base index — no trailing query param that could loop
+        l.replace(base + '/');
+      })();
     </script>
   </head>
   <body></body>
