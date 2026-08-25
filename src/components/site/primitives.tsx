@@ -97,7 +97,7 @@ export function PlateImage({
         className,
       )}
     >
-      <div className={cn("grid place-items-center p-2 sm:p-3", heightClass)}>
+      <div className={cn("block p-2 sm:p-3", heightClass)}>
         <img
           src={src}
           alt={alt}
