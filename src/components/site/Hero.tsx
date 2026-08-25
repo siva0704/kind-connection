@@ -31,9 +31,9 @@ export function Hero() {
             <p className="eyebrow">Hyderabad · Since 1999</p>
           </div>
           <h1 className="mt-7 font-display text-5xl leading-[0.98] tracking-tight sm:text-7xl lg:text-8xl">
-            <span className="text-platinum-foil">Homes cast in</span>
+            <span className="text-platinum-foil">Private 3 BHK estates</span>
             <br />
-            <em className="text-gold-foil italic">platinum &amp; gold</em>
+            <em className="text-gold-foil italic">in platinum &amp; gold</em>
           </h1>
           <p className="mt-7 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
             Arya Developers designs, builds and hands over residences that hold their
