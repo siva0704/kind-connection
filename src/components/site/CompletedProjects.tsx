@@ -35,7 +35,8 @@ function PatternGallery({ property, flip }: { property: Property; flip: boolean 
             src={src}
             alt={`${property.name} — view ${i + 1}`}
             loading="lazy"
-            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+            data-lightbox
+            className="h-full w-full cursor-zoom-in object-cover transition-transform duration-700 group-hover:scale-105"
           />
           <span className="pointer-events-none absolute inset-0 bg-background/20 opacity-0 transition-opacity group-hover:opacity-100" />
           <span className="pointer-events-none absolute bottom-2 left-3 text-[9px] uppercase tracking-[0.3em] text-primary opacity-0 transition-opacity group-hover:opacity-100">

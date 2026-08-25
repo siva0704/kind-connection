@@ -30,7 +30,8 @@ export function OngoingProjects() {
                   src={p.cover}
                   alt={p.name}
                   loading="lazy"
-                  className="h-full w-full object-cover opacity-85 transition-transform duration-700 group-hover:scale-105"
+                  data-lightbox
+                  className="h-full w-full cursor-zoom-in object-cover opacity-85 transition-transform duration-700 group-hover:scale-105"
                 />
                 <span className="pattern-lattice absolute inset-0 opacity-50" />
                 <span className="absolute left-4 top-4 border border-primary/60 bg-background/80 px-3 py-1 text-[9px] uppercase tracking-[0.3em] text-primary backdrop-blur">
