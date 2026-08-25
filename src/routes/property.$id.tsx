@@ -4,7 +4,7 @@ import { ArrowLeft, MapPin, Check } from "lucide-react";
 import { getProperty } from "@/data/properties";
 import { SiteNav } from "@/components/site/SiteNav";
 import { ContactFooter } from "@/components/site/ContactFooter";
-import { GoldFrame, StarRating } from "@/components/site/primitives";
+import { GoldFrame, StarRating, PlateImage } from "@/components/site/primitives";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/property/$id")({
