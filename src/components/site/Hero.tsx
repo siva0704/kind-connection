@@ -11,13 +11,13 @@ const stats = [
 export function Hero() {
   return (
     <section className="relative min-h-screen overflow-hidden pt-24">
-      <img
-        src={hero}
-        alt="Arya Developers luxury residential tower at golden hour"
-        width={1600}
-        height={1104}
-        className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
-      />
+        <img
+          src={hero}
+          alt="A modern luxury 3 BHK independent home with landscaped garden and private parking at golden hour"
+          width={1600}
+          height={1104}
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
+        />
       <div
         className="absolute inset-0"
         style={{ background: "var(--gradient-veil)" }}
