@@ -94,7 +94,7 @@ export function CompletedProjects() {
                 className="grid gap-10 lg:grid-cols-[minmax(0,1.25fr)_minmax(0,1fr)] lg:gap-14"
               >
                 <div className={flip ? "lg:order-2" : ""}>
-                  <PatternGallery property={p} flip={flip} />
+                  <PatternGallery property={p} />
                 </div>
 
                 <div className={`flex flex-col justify-center ${flip ? "lg:order-1" : ""}`}>
