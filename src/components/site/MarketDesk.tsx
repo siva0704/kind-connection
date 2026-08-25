@@ -21,6 +21,7 @@ export function MarketDesk() {
       <div className="relative mx-auto max-w-7xl px-5 py-28 lg:px-10 lg:py-36">
         <div className="grid gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
           <SectionHeading
+            room="Room IV"
             eyebrow="Sell & rent desk"
             title="Buy, resell or lease"
             accent="within the portfolio"

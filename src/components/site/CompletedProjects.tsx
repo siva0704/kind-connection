@@ -79,6 +79,7 @@ export function CompletedProjects() {
       <div className="pattern-lattice absolute inset-0 opacity-30" />
       <div className="relative mx-auto max-w-7xl px-5 py-28 lg:px-10 lg:py-36">
         <SectionHeading
+          room="Room I"
           eyebrow="Completed projects"
           title="Delivered, occupied and"
           accent="rated by residents"

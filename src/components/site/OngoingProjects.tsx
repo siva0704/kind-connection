@@ -11,6 +11,7 @@ export function OngoingProjects() {
       <div className="pattern-diagonal absolute inset-0" />
       <div className="relative mx-auto max-w-7xl px-5 py-28 lg:px-10 lg:py-36">
         <SectionHeading
+          room="Room II"
           eyebrow="Ongoing projects"
           title="Under construction,"
           accent="tracked in the open"
