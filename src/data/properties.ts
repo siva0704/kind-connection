@@ -69,8 +69,8 @@ export const properties: Property[] = [
     progress: 100,
     rating: 4.8,
     reviewCount: 126,
-    cover: hero,
-    gallery: [hero, p2, p3, p4, p1],
+    cover: duplexDusk,
+    gallery: [duplexDusk, interiorLiving, interiorChandelier, villaFacade, hero],
     description:
       "A gated cluster of G+1 independent 3 BHK homes in low-iron glass, warm stone and brushed platinum. Every home is a corner plot with triple aspect light, a private courtyard and a utility zone kept away from the living areas.",
     highlights: [
@@ -130,8 +130,8 @@ export const properties: Property[] = [
     progress: 100,
     rating: 4.9,
     reviewCount: 41,
-    cover: p1,
-    gallery: [p1, p2, p4, p3, hero],
+    cover: villaFacade,
+    gallery: [villaFacade, interiorChandelier, interiorLiving, duplexDusk, p1],
     description:
       "Nine compact 2 BHK homes planned around a 90-metre reflecting channel. Interiors run travertine, oak and antique brass, with a fully glazed rear façade that folds away to a private deck.",
     highlights: [
@@ -185,8 +185,8 @@ export const properties: Property[] = [
     progress: 100,
     rating: 4.6,
     reviewCount: 88,
-    cover: p3,
-    gallery: [p3, p2, hero, p1, p4],
+    cover: interiorLiving,
+    gallery: [interiorLiving, interiorChandelier, villaFacade, duplexDusk, p3],
     description:
       "Twenty-four single-storey 1 BHK homes, each with a nine-foot deep planted veranda. Handed over furnished in a warm platinum and oak palette, ideal for singles and young couples.",
     highlights: [
@@ -240,8 +240,8 @@ export const properties: Property[] = [
     progress: 46,
     rating: 4.7,
     reviewCount: 19,
-    cover: ongoing1,
-    gallery: [ongoing1, p4, hero, p3, p2],
+    cover: siteBrick,
+    gallery: [siteBrick, sitePlaster, duplexDusk, interiorLiving, ongoing1],
     description:
       "Currently at roof slab for the first row. Solaire places thirty-two cross-ventilated 3 BHK duplex homes along the lake edge on the western boundary.",
     highlights: [
@@ -289,8 +289,8 @@ export const properties: Property[] = [
     progress: 28,
     rating: 4.5,
     reviewCount: 11,
-    cover: p2,
-    gallery: [p2, p1, ongoing1, p3, p4],
+    cover: sitePlaster,
+    gallery: [sitePlaster, siteBrick, villaFacade, interiorChandelier, p2],
     description:
       "Sixty 2 BHK garden homes threaded through a retained mango orchard, with foundations complete and the first row of superstructure underway.",
     highlights: [
@@ -338,8 +338,8 @@ export const properties: Property[] = [
     progress: 12,
     rating: 4.4,
     reviewCount: 7,
-    cover: p4,
-    gallery: [p4, hero, p2, ongoing1, p1],
+    cover: siteBrick,
+    gallery: [siteBrick, sitePlaster, interiorLiving, duplexDusk, p4],
     description:
       "Excavation and raft complete. Vantage is a row of serviced 1 BHK homes around a landscaped court, aimed squarely at long-stay corporate tenancies.",
     highlights: [
