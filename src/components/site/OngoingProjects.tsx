@@ -25,15 +25,15 @@ export function OngoingProjects() {
               params={{ id: p.id }}
               className="group flex flex-col bg-background transition-colors hover:bg-card"
             >
-              <div className="relative aspect-[4/3] overflow-hidden">
+              <div className="relative grid h-52 place-items-center overflow-hidden bg-card/40 p-3 sm:h-56">
                 <img
                   src={p.cover}
                   alt={p.name}
                   loading="lazy"
                   data-lightbox
-                  className="h-full w-full cursor-zoom-in object-cover opacity-85 transition-transform duration-700 group-hover:scale-105"
+                  className="max-h-full max-w-full cursor-zoom-in object-contain transition-transform duration-700 group-hover:scale-[1.03]"
                 />
-                <span className="pattern-lattice absolute inset-0 opacity-50" />
+                <span className="pattern-lattice pointer-events-none absolute inset-0 opacity-30" />
                 <span className="absolute left-4 top-4 border border-primary/60 bg-background/80 px-3 py-1 text-[9px] uppercase tracking-[0.3em] text-primary backdrop-blur">
                   {p.progress}% complete
                 </span>
