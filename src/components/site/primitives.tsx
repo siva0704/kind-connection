@@ -66,6 +66,48 @@ export function SectionHeading({
   );
 }
 
+/**
+ * Museum "plate": an uncropped image resting on a mat inside a fixed-height
+ * frame, so rows stay horizontally consistent without ever cropping a photo.
+ */
+export function PlateImage({
+  src,
+  alt,
+  caption,
+  className,
+  heightClass = "h-44 sm:h-56",
+}: {
+  src: string;
+  alt: string;
+  caption?: string;
+  className?: string;
+  heightClass?: string;
+}) {
+  return (
+    <figure
+      className={cn(
+        "group relative overflow-hidden border border-border/60 bg-card/40 transition-colors hover:border-primary/50",
+        className,
+      )}
+    >
+      <div className={cn("grid place-items-center p-2 sm:p-3", heightClass)}>
+        <img
+          src={src}
+          alt={alt}
+          loading="lazy"
+          data-lightbox
+          className="max-h-full max-w-full cursor-zoom-in object-contain transition-transform duration-700 group-hover:scale-[1.03]"
+        />
+      </div>
+      {caption ? (
+        <figcaption className="pointer-events-none absolute bottom-0 left-0 right-0 bg-background/80 px-3 py-1.5 text-[9px] uppercase tracking-[0.3em] text-muted-foreground opacity-0 backdrop-blur transition-opacity group-hover:opacity-100">
+          {caption}
+        </figcaption>
+      ) : null}
+    </figure>
+  );
+}
+
 export function GoldFrame({
   children,
   className,
