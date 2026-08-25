@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Arya Developers</title>
+    <script>
+      // GH Pages SPA redirect: store the path then redirect to the root index
+      // so the JS router can pick up the intended route.
+      var l = window.location;
+      var base = '/kind-connection';
+      var path = l.pathname.slice(base.length) || '/';
+      var search = l.search ? '?' + l.search.slice(1).replace('?', '&') : '';
+      sessionStorage.setItem('ghpages_redirect', path + search + l.hash);
+      l.replace(base + '/?p=1');
+    </script>
+  </head>
+  <body></body>
+</html>
