@@ -6,37 +6,22 @@ import { SectionHeading, StarRating } from "./primitives";
 import { Button } from "@/components/ui/button";
 
 /**
- * Mosaic pattern: five images per project laid out as a repeating
- * tall / wide / square / square / wide lattice.
+ * Uncropped masonry gallery — each photo keeps its own frame ratio.
  */
-const patternA = [
-  "col-span-2 row-span-2",
-  "col-span-2 row-span-1",
-  "col-span-1 row-span-1",
-  "col-span-1 row-span-1",
-];
-const patternB = [
-  "col-span-2 row-span-1",
-  "col-span-1 row-span-1",
-  "col-span-1 row-span-1",
-  "col-span-2 row-span-2",
-];
-
-function PatternGallery({ property, flip }: { property: Property; flip: boolean }) {
-  const pattern = flip ? patternB : patternA;
+function PatternGallery({ property }: { property: Property }) {
   return (
-    <div className="grid grid-cols-4 grid-rows-3 gap-2 sm:gap-3">
+    <div className="columns-2 gap-2 sm:gap-3 [column-fill:balance]">
       {property.gallery.slice(0, 4).map((src, i) => (
         <figure
           key={src + i}
-          className={`group relative overflow-hidden border border-border/60 ${pattern[i]}`}
+          className="group relative mb-2 break-inside-avoid overflow-hidden border border-border/60 sm:mb-3"
         >
           <img
             src={src}
             alt={`${property.name} — view ${i + 1}`}
             loading="lazy"
             data-lightbox
-            className="h-full w-full cursor-zoom-in object-cover transition-transform duration-700 group-hover:scale-105"
+            className="block h-auto w-full cursor-zoom-in object-contain"
           />
           <span className="pointer-events-none absolute inset-0 bg-background/20 opacity-0 transition-opacity group-hover:opacity-100" />
           <span className="pointer-events-none absolute bottom-2 left-3 text-[9px] uppercase tracking-[0.3em] text-primary opacity-0 transition-opacity group-hover:opacity-100">
@@ -44,7 +29,6 @@ function PatternGallery({ property, flip }: { property: Property; flip: boolean 
           </span>
         </figure>
       ))}
-      <div className="pattern-dots col-span-4 row-span-1 hidden border border-border/60 sm:block" />
     </div>
   );
 }
