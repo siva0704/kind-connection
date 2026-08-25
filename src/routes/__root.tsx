@@ -7,7 +7,6 @@ import {
   useRouter,
   HeadContent,
   Scripts,
-  useNavigate,
 } from "@tanstack/react-router";
 import { useEffect, type ReactNode } from "react";
 
@@ -101,8 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap",
       },
-      { rel: "icon", href: "/favicon.svg", type: "image/svg+xml" },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon", sizes: "any" },
+      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
   }),
 
@@ -128,16 +126,6 @@ function RootShell({ children }: { children: ReactNode }) {
 
 function RootComponent() {
   const { queryClient } = Route.useRouteContext();
-  const navigate = useNavigate();
-
-  // Handle GH Pages 404 → index redirect: if 404.html stored a path, navigate to it.
-  useEffect(() => {
-    const redirect = sessionStorage.getItem("ghpages_redirect");
-    if (redirect) {
-      sessionStorage.removeItem("ghpages_redirect");
-      navigate({ to: redirect, replace: true });
-    }
-  }, [navigate]);
 
   return (
     <QueryClientProvider client={queryClient}>
