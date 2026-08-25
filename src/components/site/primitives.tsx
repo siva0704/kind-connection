@@ -35,12 +35,14 @@ export function SectionHeading({
   accent,
   lede,
   align = "left",
+  room,
 }: {
   eyebrow: string;
   title: string;
   accent?: string;
   lede?: string;
   align?: "left" | "center";
+  room?: string;
 }) {
   return (
     <div className={cn("max-w-2xl", align === "center" && "mx-auto text-center")}>
@@ -50,6 +52,11 @@ export function SectionHeading({
           align === "center" && "justify-center",
         )}
       >
+        {room ? (
+          <span className="border border-border/70 px-2 py-1 text-[9px] uppercase tracking-[0.3em] text-primary">
+            {room}
+          </span>
+        ) : null}
         <span className="rule-gold h-px w-10 shrink-0" />
         <p className="eyebrow">{eyebrow}</p>
       </div>
