@@ -56,7 +56,8 @@ export function MarketDesk() {
                   src={p.cover}
                   alt={p.name}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  data-lightbox
+                  className="h-full w-full cursor-zoom-in object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <span className="absolute right-3 top-3 border border-primary/50 bg-background/85 px-3 py-1 text-[9px] uppercase tracking-[0.28em] text-primary backdrop-blur">
                   {p.listing === "sale" ? "For sale" : p.listing === "rent" ? "For rent" : "Sold"}

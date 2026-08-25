@@ -118,7 +118,8 @@ function PropertyDetail() {
                   src={src}
                   alt={`${p.name} view ${i + 1}`}
                   loading="lazy"
-                  className="h-full w-full object-cover opacity-85 transition-transform duration-700 group-hover:scale-105"
+                  data-lightbox
+                  className="h-full w-full cursor-zoom-in object-cover opacity-85 transition-transform duration-700 group-hover:scale-105"
                 />
                 <span className="pattern-dots absolute inset-0 opacity-40" />
               </figure>

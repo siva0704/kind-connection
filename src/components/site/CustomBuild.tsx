@@ -23,7 +23,8 @@ export function CustomBuild() {
                 loading="lazy"
                 width={1200}
                 height={1000}
-                className="h-full w-full object-cover"
+                data-lightbox
+                className="h-full w-full cursor-zoom-in object-cover"
               />
             </div>
             <div className="pattern-lattice col-span-2 row-span-2 border border-border/60" />
