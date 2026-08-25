@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "@tanstack/react-router";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { properties, type Property } from "@/data/properties";
-import { SectionHeading, StarRating } from "./primitives";
+import { SectionHeading, StarRating, PlateImage } from "./primitives";
 import { Button } from "@/components/ui/button";
 
 /**
