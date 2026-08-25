@@ -32,7 +32,7 @@ export function OngoingProjects() {
                   alt={p.name}
                   loading="lazy"
                   data-lightbox
-                  className="max-h-full max-w-full cursor-zoom-in object-contain transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="h-full w-full cursor-zoom-in object-contain transition-transform duration-700 group-hover:scale-[1.03]"
                 />
                 <span className="pattern-lattice pointer-events-none absolute inset-0 opacity-30" />
                 <span className="absolute left-4 top-4 border border-primary/60 bg-background/80 px-3 py-1 text-[9px] uppercase tracking-[0.3em] text-primary backdrop-blur">

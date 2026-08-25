@@ -103,7 +103,7 @@ export function PlateImage({
           alt={alt}
           loading="lazy"
           data-lightbox
-          className="max-h-full max-w-full cursor-zoom-in object-contain transition-transform duration-700 group-hover:scale-[1.03]"
+          className="h-full w-full cursor-zoom-in object-contain transition-transform duration-700 group-hover:scale-[1.03]"
         />
       </div>
       {caption ? (
