@@ -37,13 +37,6 @@ export const Route = createFileRoute("/property/$id")({
   component: PropertyDetail,
 });
 
-const galleryPattern = [
-  "col-span-4 row-span-2 sm:col-span-2",
-  "col-span-2 row-span-1",
-  "col-span-2 row-span-1",
-  "col-span-2 row-span-1",
-  "col-span-2 row-span-1",
-];
 
 function PropertyDetail() {
   const { property: p } = Route.useLoaderData();
