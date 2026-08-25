@@ -51,13 +51,13 @@ export function MarketDesk() {
               params={{ id: p.id }}
               className="group flex flex-col bg-background p-4 transition-colors hover:bg-card"
             >
-              <div className="relative aspect-[5/4] overflow-hidden">
+              <div className="relative grid h-48 place-items-center overflow-hidden border border-border/50 bg-card/40 p-3 sm:h-52">
                 <img
                   src={p.cover}
                   alt={p.name}
                   loading="lazy"
                   data-lightbox
-                  className="h-full w-full cursor-zoom-in object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="max-h-full max-w-full cursor-zoom-in object-contain transition-transform duration-700 group-hover:scale-[1.03]"
                 />
                 <span className="absolute right-3 top-3 border border-primary/50 bg-background/85 px-3 py-1 text-[9px] uppercase tracking-[0.28em] text-primary backdrop-blur">
                   {p.listing === "sale" ? "For sale" : p.listing === "rent" ? "For rent" : "Sold"}
