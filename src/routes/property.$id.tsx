@@ -4,7 +4,7 @@ import { ArrowLeft, MapPin, Check } from "lucide-react";
 import { getProperty } from "@/data/properties";
 import { SiteNav } from "@/components/site/SiteNav";
 import { ContactFooter } from "@/components/site/ContactFooter";
-import { GoldFrame, StarRating, PlateImage } from "@/components/site/primitives";
+import { GoldFrame, StarRating } from "@/components/site/primitives";
 import { Button } from "@/components/ui/button";
 
 export const Route = createFileRoute("/property/$id")({
@@ -98,19 +98,72 @@ function PropertyDetail() {
           </div>
         </section>
 
-        {/* Pattern gallery */}
-        <section className="mx-auto max-w-7xl px-5 py-20 lg:px-10">
+        {/* Mosaic gallery — tall-left + 2-stacked-right + bottom row */}
+        <section className="mx-auto max-w-7xl px-5 py-16 lg:px-10">
           <p className="eyebrow">Gallery</p>
-          <div className="mt-6 grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-5">
-            {p.gallery.slice(0, 5).map((src, i) => (
-              <PlateImage
-                key={`${src}-${i}`}
-                src={src}
-                alt={`${p.name} view ${i + 1}`}
-                caption={`Plate 0${i + 1}`}
-                heightClass="h-40 sm:h-48"
+          <div className="mt-6 grid grid-cols-2 gap-1 sm:gap-1.5 lg:grid-cols-3 lg:gap-2">
+            {/* Row A: tall hero (left, spans 2 rows) + top-right + mid-right */}
+            <figure
+              className="group relative col-span-1 row-span-2 overflow-hidden lg:col-span-1"
+              style={{ minHeight: 0 }}
+            >
+              <img
+                src={p.gallery[0]}
+                alt={`${p.name} — view 1`}
+                loading="eager"
+                data-lightbox
+                className="h-full w-full cursor-zoom-in object-cover transition-transform duration-500 group-hover:scale-[1.04]"
               />
-            ))}
+              <span className="pointer-events-none absolute inset-0 bg-background/0 transition-colors duration-300 group-hover:bg-background/10" />
+            </figure>
+
+            <figure className="group relative aspect-[16/9] overflow-hidden">
+              <img
+                src={p.gallery[1]}
+                alt={`${p.name} — view 2`}
+                loading="lazy"
+                data-lightbox
+                className="h-full w-full cursor-zoom-in object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+              />
+              <span className="pointer-events-none absolute inset-0 bg-background/0 transition-colors duration-300 group-hover:bg-background/10" />
+            </figure>
+
+            <figure className="group relative aspect-[16/9] overflow-hidden">
+              <img
+                src={p.gallery[2]}
+                alt={`${p.name} — view 3`}
+                loading="lazy"
+                data-lightbox
+                className="h-full w-full cursor-zoom-in object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+              />
+              <span className="pointer-events-none absolute inset-0 bg-background/0 transition-colors duration-300 group-hover:bg-background/10" />
+            </figure>
+
+            {/* Row B: two wide images spanning bottom */}
+            {p.gallery[3] && (
+              <figure className="group relative aspect-[16/9] overflow-hidden">
+                <img
+                  src={p.gallery[3]}
+                  alt={`${p.name} — view 4`}
+                  loading="lazy"
+                  data-lightbox
+                  className="h-full w-full cursor-zoom-in object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                />
+                <span className="pointer-events-none absolute inset-0 bg-background/0 transition-colors duration-300 group-hover:bg-background/10" />
+              </figure>
+            )}
+            {p.gallery[4] && (
+              <figure className="group relative aspect-[16/9] overflow-hidden">
+                <img
+                  src={p.gallery[4]}
+                  alt={`${p.name} — view 5`}
+                  loading="lazy"
+                  data-lightbox
+                  className="h-full w-full cursor-zoom-in object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                />
+                <span className="pointer-events-none absolute inset-0 bg-background/0 transition-colors duration-300 group-hover:bg-background/10" />
+              </figure>
+            )}
           </div>
         </section>
 

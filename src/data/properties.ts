@@ -1,22 +1,32 @@
-import p1 from "@/assets/p1.jpg";
-import p2 from "@/assets/p2.jpg";
-import p3 from "@/assets/p3.jpg";
-import p4 from "@/assets/p4.jpg";
-import ongoing1 from "@/assets/ongoing1.jpg";
-import hero from "@/assets/hero-home.jpg";
-import duplexDuskAsset from "@/assets/duplex-dusk.jpg.asset.json";
-import villaFacadeAsset from "@/assets/villa-facade.jpg.asset.json";
-import interiorLivingAsset from "@/assets/interior-living.jpg.asset.json";
-import interiorChandelierAsset from "@/assets/interior-chandelier.jpg.asset.json";
-import siteBrickAsset from "@/assets/site-brick.jpg.asset.json";
-import sitePlasterAsset from "@/assets/site-plaster.jpg.asset.json";
+// Completed project images
+import cp1 from "@/assets/completed-projects/p1.jpg";
+import cp2 from "@/assets/completed-projects/p2.jpg";
+import cp3 from "@/assets/completed-projects/p3.jpg";
+import cp4 from "@/assets/completed-projects/p4.jpg";
+import cpImg1 from "@/assets/completed-projects/cp-img1.jpg";
+import cpImg2 from "@/assets/completed-projects/cp-img2.jpg";
+import cpImg3 from "@/assets/completed-projects/cp-img3.jpg";
+import cpImg4 from "@/assets/completed-projects/cp-img4.jpg";
+import cpGemini from "@/assets/completed-projects/cp-gemini.png";
 
-const duplexDusk = duplexDuskAsset.url;
-const villaFacade = villaFacadeAsset.url;
-const interiorLiving = interiorLivingAsset.url;
-const interiorChandelier = interiorChandelierAsset.url;
-const siteBrick = siteBrickAsset.url;
-const sitePlaster = sitePlasterAsset.url;
+// Ongoing project images
+import og1 from "@/assets/ongoing-projects/ongoing1.jpg";
+import ogTower from "@/assets/ongoing-projects/hero-tower.jpg";
+import ogImg1 from "@/assets/ongoing-projects/og-img1.jpg";
+import ogImg2 from "@/assets/ongoing-projects/og-img2.jpg";
+import ogImg3 from "@/assets/ongoing-projects/og-img3.jpg";
+import ogImg4 from "@/assets/ongoing-projects/og-img4.jpg";
+
+// Hero image (shared)
+import hero from "@/assets/hero-home.jpg";
+
+// Named aliases kept for readability
+const duplexDusk       = cp1;
+const villaFacade      = cp2;
+const interiorLiving   = cp3;
+const interiorChandelier = cp4;
+const siteBrick        = og1;
+const sitePlaster      = ogTower;
 
 
 export type PropertyStatus = "completed" | "ongoing";
@@ -70,7 +80,7 @@ export const properties: Property[] = [
     rating: 4.8,
     reviewCount: 126,
     cover: duplexDusk,
-    gallery: [duplexDusk, interiorLiving, interiorChandelier, villaFacade, hero],
+    gallery: [duplexDusk, cpImg1, cpImg2, cpImg3, cpImg4],
     description:
       "A gated cluster of G+1 independent 3 BHK homes in low-iron glass, warm stone and brushed platinum. Every home is a corner plot with triple aspect light, a private courtyard and a utility zone kept away from the living areas.",
     highlights: [
@@ -131,7 +141,7 @@ export const properties: Property[] = [
     rating: 4.9,
     reviewCount: 41,
     cover: villaFacade,
-    gallery: [villaFacade, interiorChandelier, interiorLiving, duplexDusk, p1],
+    gallery: [villaFacade, cpGemini, cpImg1, cpImg3, cp1],
     description:
       "Nine compact 2 BHK homes planned around a 90-metre reflecting channel. Interiors run travertine, oak and antique brass, with a fully glazed rear façade that folds away to a private deck.",
     highlights: [
@@ -186,7 +196,7 @@ export const properties: Property[] = [
     rating: 4.6,
     reviewCount: 88,
     cover: interiorLiving,
-    gallery: [interiorLiving, interiorChandelier, villaFacade, duplexDusk, p3],
+    gallery: [interiorLiving, cpImg2, cpImg4, cpGemini, cp3],
     description:
       "Twenty-four single-storey 1 BHK homes, each with a nine-foot deep planted veranda. Handed over furnished in a warm platinum and oak palette, ideal for singles and young couples.",
     highlights: [
@@ -241,7 +251,7 @@ export const properties: Property[] = [
     rating: 4.7,
     reviewCount: 19,
     cover: siteBrick,
-    gallery: [siteBrick, sitePlaster, duplexDusk, interiorLiving, ongoing1],
+    gallery: [siteBrick, ogImg1, ogImg2, ogImg3, ogImg4],
     description:
       "Currently at roof slab for the first row. Solaire places thirty-two cross-ventilated 3 BHK duplex homes along the lake edge on the western boundary.",
     highlights: [
@@ -290,7 +300,7 @@ export const properties: Property[] = [
     rating: 4.5,
     reviewCount: 11,
     cover: sitePlaster,
-    gallery: [sitePlaster, siteBrick, villaFacade, interiorChandelier, p2],
+    gallery: [sitePlaster, ogImg1, ogImg3, ogImg2, cp2],
     description:
       "Sixty 2 BHK garden homes threaded through a retained mango orchard, with foundations complete and the first row of superstructure underway.",
     highlights: [
@@ -339,7 +349,7 @@ export const properties: Property[] = [
     rating: 4.4,
     reviewCount: 7,
     cover: siteBrick,
-    gallery: [siteBrick, sitePlaster, interiorLiving, duplexDusk, p4],
+    gallery: [siteBrick, ogImg4, ogImg2, ogImg3, og1],
     description:
       "Excavation and raft complete. Vantage is a row of serviced 1 BHK homes around a landscaped court, aimed squarely at long-stay corporate tenancies.",
     highlights: [

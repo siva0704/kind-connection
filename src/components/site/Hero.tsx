@@ -1,4 +1,4 @@
-import hero from "@/assets/hero-tower.jpg";
+import hero from "@/assets/ongoing-projects/hero-tower.jpg";
 import { Button } from "@/components/ui/button";
 
 const stats = [

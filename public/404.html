@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Arya Developers</title>
+    <script>
+      // GH Pages SPA fallback: deep URLs (e.g. /kind-connection/property/xyz)
+      // cause GH Pages to serve this 404.html. We save the intended path and
+      // redirect to the SPA root so the JS router can navigate correctly.
+      (function () {
+        var base = '/kind-connection';
+        var l = window.location;
+        var path = l.pathname.replace(base, '') || '/';
+        sessionStorage.setItem('ghpages_redirect', path + l.search + l.hash);
+        l.replace(base + '/');
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
